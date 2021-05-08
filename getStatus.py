@@ -1,5 +1,7 @@
 from cowin_api import CoWinAPI
 import json
+import time
+
 class Cowin:
   def notifyUsers(self):
     # will send notification to users that vaccine is available
@@ -35,4 +37,7 @@ class Cowin:
             print(f'Some error while notifying users: {err}')
 
 obj = Cowin()
-obj.checkForVaccine()
+while True:
+  obj.checkForVaccine()
+  print("Press 'Ctrl + C' to exit...")
+  time.sleep(60)
