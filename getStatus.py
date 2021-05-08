@@ -6,10 +6,10 @@ import requests
 class Cowin:
   def notifyUsers(self):
     # will send notification to users that vaccine is available
-    print("Vaccine Found")
+    print("Vaccine Found!!!")
     with open("telegram.params", 'r') as file:
       data = file.read()
-    text = "Apollsdsdsdsdsdsdo 11 available"
+    text = "Vaccine Found!!!"
     base_url = data + '\"{}\"'.format(text)
     response = requests.get(base_url)
     return response
@@ -49,4 +49,4 @@ while True:
   named_tuple = time.localtime() # get struct_time
   time_string = time.strftime("%m/%d/%Y, %H:%M:%S", named_tuple)
   print(time_string," : Press 'Ctrl + C' to exit...")
-  time.sleep(60)
+  time.sleep(30)
